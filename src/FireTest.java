@@ -22,4 +22,25 @@ public class FireTest {
     }
 
     // Add more tests!
+
+    @Test
+    public void testSingleTree() {
+        char[][] forest = {
+            {'t'}
+        };
+
+        assertEquals(0, Fire.timeToBurn(forest, 0, 0));
+    }
+
+    @Test
+    public void testTwoAdjacentTrees() {
+        char[][] forest = {
+            {'t', 't'}
+        };
+
+        assertEquals(1, Fire.timeToBurn(forest, 0, 0));
+    }
+
+    
+
 }
